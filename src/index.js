@@ -1,3 +1,3 @@
-import './x.js'
-import  './y.css'
+import './x.scss'
+import './y.less'
 console.log(x)
