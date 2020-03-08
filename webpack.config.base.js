@@ -16,21 +16,30 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.styl$/,
+        loader: ['style-loader', 'css-loader', 'stylus-loader'], // compiles Less to CSS
+      },
+      {
+        test: /\.less$/,
+        loader: ['style-loader', 'css-loader', 'less-loader'], // compiles Less to CSS
+      },
+
+      {
         test: /\.scss$/i,
         use: [
           'style-loader',
           'css-loader',
           {
-            loader: "sass-loader",
+            loader: 'sass-loader',
             options: {
-              implementation:require('dart-sass')
+              implementation: require('dart-sass')
             }
           },
         ],
       },
     ],
   },
-};
+}
 
 
 
